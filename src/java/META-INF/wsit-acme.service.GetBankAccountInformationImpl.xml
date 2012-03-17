@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+ <definitions 
+ xmlns="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+ xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="GetBankAccountInformationImplService" targetNamespace="http://service.acme/" xmlns:tns="http://service.acme/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:sc="http://schemas.sun.com/2006/03/wss/server" xmlns:wspp="http://java.sun.com/xml/ns/wsit/policy" 
+ >
+    <message name="getAccount"/>
+    <message name="getAccountResponse"/>
+    <message name="getAllAccountsByType"/>
+    <message name="getAllAccountsByTypeResponse"/>
+    <message name="InvalidAccountException"/>
+    <portType name="GetBankAccountInformationImpl">
+        <operation name="getAccount">
+            <input message="tns:getAccount"/>
+            <output message="tns:getAccountResponse"/>
+        </operation>
+        <operation name="getAllAccountsByType">
+            <input message="tns:getAllAccountsByType"/>
+            <output message="tns:getAllAccountsByTypeResponse"/>
+            <fault name="InvalidAccountException" message="tns:InvalidAccountException"/>
+        </operation>
+    </portType>
+    <binding name="GetBankAccountInformationImplPortBinding" type="tns:GetBankAccountInformationImpl">
+        <operation name="getAccount">
+            <input></input>
+            <output></output>
+        </operation>
+        <operation name="getAllAccountsByType">
+            <input></input>
+            <output></output>
+            <fault name="InvalidAccountException"/>
+        </operation>
+    </binding>
+    <service name="GetBankAccountInformationImplService">
+        <port name="GetBankAccountInformationImplPort" binding="tns:GetBankAccountInformationImplPortBinding"/>
+    </service>
+</definitions>
