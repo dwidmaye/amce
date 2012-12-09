@@ -6,11 +6,11 @@
             <line>41</line>
         </file>
         <file>
-            <url>src/java/acme/service/GetBankAccountInformation.java</url>
-            <line>19</line>
+            <url>src/java/acme/business/CustomerMgrBean.java</url>
+            <line>39</line>
         </file>
         <file>
-            <url>src/java/acme/business/CustomerMgrBean.java</url>
+            <url>src/java/acme/service/GetBankAccountInformation.java</url>
             <line>19</line>
         </file>
     </editor-bookmarks>
